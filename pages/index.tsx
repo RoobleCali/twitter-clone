@@ -1,20 +1,19 @@
 import Head from "next/head";
-import Feed from "../components/Feed";
+import { SVGProps } from "react";
 import Sidebar from "../components/Sidebar";
-import Widget from "../components/Widget";
-import toast, { Toaster } from "react-hot-toast";
+
+interface Props {
+  Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+  title: string;
+}
 
 const IndexPage = () => (
-  <div className="lg:max-w-6xl mx-auto h-screen overflow-hidden">
+  <div className="bg-black h-screen overflow-hidden font-sans">
     <Head>
-      <title>Twitter clone</title>
+      <title>spotify clone</title>
     </Head>
-    <Toaster />
-    <main className="grid grid-cols-9">
-      <Sidebar />
-      <Feed />
-      <Widget />
-    </main>
+    {/* sidebar */}
+    <Sidebar />
   </div>
 );
 

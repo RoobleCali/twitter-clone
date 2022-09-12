@@ -1,31 +1,38 @@
+import React from "react";
 import {
-  BellOutline,
-  HashtagOutline,
-  BookmarkOutline,
-  CollectionOutline,
-  DotsCircleHorizontalOutline,
-  MailOutline,
-  UserOutline,
   HomeOutline,
+  SearchOutline,
+  LibraryOutline,
+  PlusCircleOutline,
+  HeartOutline,
+  RssOutline,
 } from "heroicons-react";
 import SidebarRows from "./SidebarRows";
-
 function Sidebar() {
   return (
-    <div className="col-span-2 flex flex-col items-center md:items-start">
-      <img
-        src="https://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c53e.png"
-        alt=""
-        className="h-10 w-10 m-3"
-      />
-      <SidebarRows Icon={HomeOutline} title="Home" />
-      <SidebarRows Icon={HashtagOutline} title="Explore" />
-      <SidebarRows Icon={BellOutline} title="Notification" />
-      <SidebarRows Icon={MailOutline} title="Messages" />
-      <SidebarRows Icon={BookmarkOutline} title="Bookmarks" />
-      <SidebarRows Icon={CollectionOutline} title="Lists" />
-      <SidebarRows Icon={UserOutline} title="Sign in" />
-      <SidebarRows Icon={DotsCircleHorizontalOutline} title="More" />
+    <div className="text-gray-500 p-5 text-sm border-gray-900 space-y-3">
+      <SidebarRows title="Home" Icon={HomeOutline} />
+      <SidebarRows title="Search" Icon={SearchOutline} />
+      <SidebarRows title="Your Library" Icon={LibraryOutline} />
+      <hr className="border-t-[0.1px] border-gray-900" />
+
+      <SidebarRows title="Create Playlist" Icon={PlusCircleOutline} />
+      <SidebarRows title="Liked songs" Icon={HeartOutline} />
+      <SidebarRows title="Your episodes" Icon={RssOutline} />
+      <hr className="border-t-[0.1px] border-gray-900" />
+
+      {/* playlist */}
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
+      <p className="cursor-pointer hover:text-white">Playlist Name...</p>
     </div>
   );
 }
